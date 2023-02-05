@@ -1,11 +1,16 @@
 package PW02
-import scala.io.StdIn.readInt
 
-val pi = 3.14159
-def area(h:Int, r:Int): Double = 2 * pi * r * h + 2 * pi * r * r
+object Min_Task_2 {
 
-@main def main() = {
-  val height = readInt()
-  val radius = readInt()
-  println(area(height, radius))
+  def pi = 3.14159
+
+  def areaCalc(h : Int, r : Int) : Double = {
+    val area = 2 * pi * r * h + 2 * pi * r * r
+    return area
+  }
+
+  def main(args: Array[String]): Unit = {
+    print(areaCalc(3, 4))
+  }
+
 }

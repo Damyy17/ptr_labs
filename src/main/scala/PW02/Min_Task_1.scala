@@ -3,7 +3,7 @@ package PW02
 import scala.io.StdIn.readInt
 import scala.math.sqrt
 
-object Min_Task_1_isPrime extends App {
+object Min_Task_1 {
   println("Write number:")
   var number = readInt()
 
