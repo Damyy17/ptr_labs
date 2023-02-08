@@ -1,5 +1,12 @@
 package PW01
 
-object HelloWorld extends App {
-  println("Hello PTR")
+object HelloWorld {
+
+  def helloWorld() : String = {
+    return "Hello PTR"
+  }
+  
+  def main(args: Array[String]): Unit = {
+    println(helloWorld())
+  }
 }

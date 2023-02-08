@@ -3,6 +3,6 @@ import org.scalatest.funsuite.AnyFunSuite
 
 class HelloWorldTest extends AnyFunSuite{
   test("HelloWorld.print"){
-    HelloWorld
+    assert(HelloWorld.helloWorld() === "Hello PTR")
   }
 }
