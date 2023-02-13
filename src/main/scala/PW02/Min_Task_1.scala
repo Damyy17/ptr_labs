@@ -7,7 +7,7 @@ object Min_Task_1 {
   println("Write number:")
   var number = readInt()
 
-  def isPrime(n: Int) : String = {
+  def isPrime(n: Int) : Boolean = {
     val primes: Array[Boolean] = new Array[Boolean](n+1)
     for (x <- 0 to n)
       primes(x) = true
@@ -25,10 +25,12 @@ object Min_Task_1 {
       i+=1
     }
     if (primes(n))
-      return "is Prime"
+      return true
     else
-      return "is Not Prime"
+      return false
   }
 
-  println("Number " + number + " " + isPrime(number))
+  def main(args: Array[String]): Unit = {
+    println("Number " + number + " is prime: " + isPrime(number))
+  }
 }

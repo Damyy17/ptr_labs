@@ -18,6 +18,6 @@ object Min_Task_8 {
   }
 
   def main(args: Array[String]): Unit = {
-    println(minNumberSelect(3, 4 ,0))
+    println(minNumberSelect(0, 4 ,0))
   }
 }

@@ -1,13 +1,11 @@
 package PW02
 
-import scala.io.StdIn.readInt
+import scala.collection.mutable.ListBuffer
 import scala.math.sqrt
 
-object Min_Task_0 {
-  println("Write number:")
-  var number = readInt()
+object Bonus_Task_3 {
 
-  def isPrime(n: Int) : String = {
+  def isPrime(n: Int) : Boolean = {
     val primes: Array[Boolean] = new Array[Boolean](n+1)
     for (x <- 0 to n)
       primes(x) = true
@@ -25,12 +23,21 @@ object Min_Task_0 {
       i+=1
     }
     if (primes(n))
-      return "is Prime"
+      return true
     else
-      return "is Not Prime"
+      return false
   }
 
+  def factorize(n : Int) : List[Int] = {
+    var num = n
+    var factors = new ListBuffer[Int]
+    for (i<-2 to n if num % i == 0 && isPrime(i)){
+      factors += i
+    }
+    factors.reverse
+    return factors.toList
+  }
   def main(args: Array[String]): Unit = {
-    println("Number " + number + " " + isPrime(number))
+    println(factorize(42))
   }
 }
